@@ -35,7 +35,7 @@ public class TarefasController {
         return ResponseEntity.ok(tarefasService.gravarTarefa(token, dto));
     }
 
-    @GetMapping("/eventos)")
+    @GetMapping("/eventos")
     @Operation(summary = "Busca tarefas por período", description = "Busca uma lista de tarefas dentro de um determinado período")
     @ApiResponse(responseCode = "200", description = "Tarefas encontradas com sucesso")
     @ApiResponse(responseCode = "500", description = "Erro no servidor")

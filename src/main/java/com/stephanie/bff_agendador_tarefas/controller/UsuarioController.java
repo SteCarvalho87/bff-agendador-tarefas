@@ -3,7 +3,7 @@ package com.stephanie.bff_agendador_tarefas.controller;
 
 import com.stephanie.bff_agendador_tarefas.business.UsuarioService;
 import com.stephanie.bff_agendador_tarefas.business.dto.in.EnderecoDTORequest;
-import com.stephanie.bff_agendador_tarefas.business.dto.in.LoginRequest;
+import com.stephanie.bff_agendador_tarefas.business.dto.in.LoginDTORequest;
 import com.stephanie.bff_agendador_tarefas.business.dto.in.TelefoneDTORequest;
 import com.stephanie.bff_agendador_tarefas.business.dto.out.EnderecoDTOResponse;
 import com.stephanie.bff_agendador_tarefas.business.dto.out.TelefoneDTOResponse;
@@ -42,7 +42,7 @@ public class UsuarioController {
     @ApiResponse(responseCode = "200", description = "Usuário logado com sucesso")
     @ApiResponse(responseCode = "400", description = "Credenciais inválidas")
     @ApiResponse(responseCode = "500", description = "Erro no servidor")
-    public String login(@RequestBody LoginRequest usuarioDTO){
+    public String login(@RequestBody LoginDTORequest usuarioDTO){
         return usuarioService.loginUsuario(usuarioDTO);
     }
 

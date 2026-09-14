@@ -1,7 +1,7 @@
 package com.stephanie.bff_agendador_tarefas.business;
 
 import com.stephanie.bff_agendador_tarefas.business.dto.in.EnderecoDTORequest;
-import com.stephanie.bff_agendador_tarefas.business.dto.in.LoginRequest;
+import com.stephanie.bff_agendador_tarefas.business.dto.in.LoginDTORequest;
 import com.stephanie.bff_agendador_tarefas.business.dto.in.TelefoneDTORequest;
 import com.stephanie.bff_agendador_tarefas.business.dto.out.EnderecoDTOResponse;
 import com.stephanie.bff_agendador_tarefas.business.dto.out.TelefoneDTOResponse;
@@ -20,7 +20,7 @@ public class UsuarioService {
         return client.salvaUsuario(usuarioDTO);
     }
 
-    public String loginUsuario(LoginRequest usuarioDTO){
+    public String loginUsuario(LoginDTORequest usuarioDTO){
 
         return client.login(usuarioDTO);
     }

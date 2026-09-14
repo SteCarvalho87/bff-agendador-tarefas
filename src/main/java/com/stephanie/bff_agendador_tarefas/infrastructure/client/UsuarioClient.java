@@ -2,7 +2,7 @@ package com.stephanie.bff_agendador_tarefas.infrastructure.client;
 
 
 import com.stephanie.bff_agendador_tarefas.business.dto.in.EnderecoDTORequest;
-import com.stephanie.bff_agendador_tarefas.business.dto.in.LoginRequest;
+import com.stephanie.bff_agendador_tarefas.business.dto.in.LoginDTORequest;
 import com.stephanie.bff_agendador_tarefas.business.dto.in.TelefoneDTORequest;
 import com.stephanie.bff_agendador_tarefas.business.dto.out.EnderecoDTOResponse;
 import com.stephanie.bff_agendador_tarefas.business.dto.out.TelefoneDTOResponse;
@@ -19,10 +19,10 @@ public interface UsuarioClient {
                                                   @RequestHeader("Authorization") String token);
 
     @PostMapping
-    UsuarioDTOResponse salvaUsuario(@RequestBody UsuarioDTORequest usuarioDTO);
+    UsuarioDTOResponse salvaUsuario(@RequestBody UsuarioDTORequest usuarioDTORequest);
 
     @PostMapping("/login")
-    String login(@RequestBody LoginRequest usuarioDTO);
+    String login(@RequestBody LoginDTORequest usuarioDTO);
 
     @DeleteMapping("/{email}")
     void deletaUsuarioPorEmail(@PathVariable String email,
